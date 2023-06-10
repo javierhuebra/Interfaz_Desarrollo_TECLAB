@@ -99,7 +99,7 @@ const retornarCard = (objeto) => {
 
 let divContainer = document.querySelector('.container');
 let i=1
-let cards
+let cards=''
 
 productos.forEach( ( producto ) => {
     producto.id = (i++) //Le pongo el id a cada elemento
