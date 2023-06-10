@@ -193,7 +193,33 @@ tbody tr:nth-child(even) {
 #btnComprar:active {
     background-color: black;
 }
-
+.apis{
+    margin: 0;
+}
+.api{
+    margin: 0;
+    border: 3px solid green;
+    background-color: rgba(0, 128, 0, 0.507);
+    padding: 0 10px;
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px black;
+    border-radius: 16px;
+}
+.tit-api{
+    margin: 0;
+    font-weight: bold;
+    color: green;
+    
+}
+.cont-apis{
+    margin: 0;
+    display: flex;
+}
+.not{
+    opacity: 0.15;
+}
 /*  CONTROLO MEDIA SCREENS Y ELEMENTOS EN PANTALLA
     ESTO APLICA SOLAMENTE A LOS ELEMENTOS DE CHECKOUT.HTML */
 
