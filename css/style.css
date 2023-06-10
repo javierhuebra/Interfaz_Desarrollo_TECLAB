@@ -219,6 +219,7 @@ tbody tr:nth-child(even) {
 }
 .not{
     opacity: 0.15;
+    background-color: rgb(143, 1, 1);
 }
 /*  CONTROLO MEDIA SCREENS Y ELEMENTOS EN PANTALLA
     ESTO APLICA SOLAMENTE A LOS ELEMENTOS DE CHECKOUT.HTML */
