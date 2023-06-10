@@ -81,6 +81,8 @@ const productos = [
     }
 ]
 
+let productosConId = [] //Variable global para no escribir uno por uno los id en el arreglo
+
 const retornarCard = (objeto) => {
     return `
     <div class="card">
@@ -97,8 +99,13 @@ const retornarCard = (objeto) => {
 
 let divContainer = document.querySelector('.container');
 let i=1
+let cards
+
 productos.forEach( ( producto ) => {
-    producto.id = (i++)
-    divContainer.innerHTML += retornarCard(producto)
-    console.log(producto)
+    producto.id = (i++) //Le pongo el id a cada elemento
+    cards += retornarCard(producto) //Guardo todo el codigo html en una variable de tipo string para insertarlo en una sola vez
+    
+    productosConId.push(producto) //Voy guardando cada objeto en el nuevo arreglo que cree
 })
+divContainer.innerHTML = cards //Inserto el HTML sin renderizar varias veces el DOM
+
