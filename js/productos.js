@@ -1,3 +1,11 @@
+/* ------------------------------------------------------------------------------------------------------------------
+Institución: TECLAB
+Carrera: Tecnicatura Superior en Programación
+Alumno: Huebra Javier Emanuel
+
+Este proyecto base fue proporcionado por la cátedra para ir anexandole la funcionalidad en cuatro instancias 
+------------------------------------------------------------------------------------------------------------------ */
+
 const productos = [
     {
         imagen: "🍌",
@@ -81,12 +89,12 @@ const productos = [
     }
 ]
 
-let productosConId = [] //Variable global para no escribir uno por uno los id en el arreglo
+let productosConId = [] //Nuevo arreglo para guardar los productos y agregarle el id sin escribirlo a mano
 
-const retornarCard = (objeto) => {
+const retornarCard = (objeto) => { //Función que recibe un objeto y retorna un string de código HTML para insertar en el DOM
     return `
     <div class="card">
-        <div class="card-image">${objeto.imagen}</div>
+        <div class="card-image">${objeto.imagen}</div> 
         <div class="card-name">${objeto.nombre}</div>
         <div class="card-price">${objeto.precio}</div>
         <div class="card-button">
@@ -97,15 +105,15 @@ const retornarCard = (objeto) => {
     `
 }
 
-let divContainer = document.querySelector('.container');
-let i=1
-let cards=''
+let divContainer = document.querySelector('.container'); //Referencio al div con clase container para insertar el codigo HTML
+let i=1 //Variable para asignar los id
+let cards='' //Variable para ir guardando lo que retorna retornarCard y poder insertarlo con un solo renderizado ya que cuando se usa innerHTML borra y vuelve a escribir y puede ser poco eficiente
 
 productos.forEach( ( producto ) => {
     producto.id = (i++) //Le pongo el id a cada elemento
     cards += retornarCard(producto) //Guardo todo el codigo html en una variable de tipo string para insertarlo en una sola vez
     
-    productosConId.push(producto) //Voy guardando cada objeto en el nuevo arreglo que cree
+    productosConId.push(producto) //Voy guardando cada objeto en el nuevo arreglo que cree porque los productos de este arreglo tendrán el id
 })
 divContainer.innerHTML = cards //Inserto el HTML sin renderizar varias veces el DOM
 
