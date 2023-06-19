@@ -16,18 +16,20 @@ const agregarAlCarrito = (frutaId) => { //Funcion que recibe un id y busca un pr
         if (valor !== undefined) {
 
             carritoFrutas.push(valor) //Agrego al carrito el objeto con id espcificado
+        
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: `${valor.imagen} ${valor.nombre} agregado al carrito`,
+                showConfirmButton: false,
+                timer: 1500
+              })
         }
     }
 
     almacenarCarrito(carritoFrutas) //Guarda en LocalStorage el arreglo de frutas selleccionadas
 
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Fruta agregada al carrito',
-        showConfirmButton: false,
-        timer: 1000
-      })
+    
 }
 
 const almacenarCarrito = (carritoFrutas) => { //Funcion que guarda en localstorage si carritoFrutas tiene algo 
