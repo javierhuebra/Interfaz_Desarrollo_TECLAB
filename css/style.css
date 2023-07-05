@@ -260,6 +260,10 @@ tbody tr:nth-child(even) {
     opacity: 0.15;
     background-color: rgb(143, 1, 1);
 }
+.hide{
+    /* pointer-events: none; */
+    opacity: 0.3;
+}
 
 /*  CONTROLO MEDIA SCREENS Y ELEMENTOS EN PANTALLA
     ESTO APLICA SOLAMENTE A LOS ELEMENTOS DE CHECKOUT.HTML */

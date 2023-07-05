@@ -12,7 +12,7 @@ Este proyecto base fue proporcionado por la cátedra para ir anexandole la funci
 const agregarAlCarrito = (frutaId) => { //Funcion que recibe un id y busca un producto con ese id
 
     if (frutaId > 0) {
-        const valor = productosConId.find(elemento => elemento.id === frutaId) //Busca con el metodo find() un elemento del arreglo en el cual su id sea igual al parametro que requiere la funcion
+        const valor = productos_data.find(elemento => elemento.id === frutaId) //Busca con el metodo find() un elemento del arreglo en el cual su id sea igual al parametro que requiere la funcion
         if (valor !== undefined) {
 
             carritoFrutas.push(valor) //Agrego al carrito el objeto con id espcificado
@@ -26,11 +26,13 @@ const agregarAlCarrito = (frutaId) => { //Funcion que recibe un id y busca un pr
               })
         }
     }
-
+    
     almacenarCarrito(carritoFrutas) //Guarda en LocalStorage el arreglo de frutas selleccionadas
 
     
 }
+
+
 
 const almacenarCarrito = (carritoFrutas) => { //Funcion que guarda en localstorage si carritoFrutas tiene algo 
 
