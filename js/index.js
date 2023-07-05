@@ -38,7 +38,7 @@ const retornarCard = (objeto) => { //Función que recibe un objeto y retorna un 
 }
 
 const productos_data = []
-const url = '../datos.json'
+const url = 'https://javierhuebra.github.io/Interfaz_Desarrollo_TECLAB/datos.json'
 
 
 const obtenerProductos = () => {
