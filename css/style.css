@@ -261,7 +261,7 @@ tbody tr:nth-child(even) {
     background-color: rgb(143, 1, 1);
 }
 .hide{
-    /* pointer-events: none; */
+    pointer-events: none; 
     opacity: 0.3;
 }
 
